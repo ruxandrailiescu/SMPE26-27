@@ -1,0 +1,64 @@
+---
+title: "lecture-2"
+author: "Ruxandra Iliescu"
+date: "2026-10-01"
+output: github_document
+---
+
+## Data Visualization
+
+
+### Discussion
+
+- we do not have the same perception of things, so it is important to take different things (e.g., color, depth) into account when presenting data;
+- the message should be clear from the figure;
+- feelings can arise from visualizations, so take into account if the audience might be distracted from the point you are trying to make;
+- nothing is neutral for everybody;
+- discuss with people around you about the right decision (ethical considerations);
+- figures can manipulate perception of data (and distort reality);
+- I liked that the professor started with presenting examples and a discussion;
+
+
+### Graphics in the Big Data era
+
+- all tools rely on hypotheses, which we must check;
+- how do we visualize highly multidimensional data?
+- graphics are rooted in the sub-field they are presented (e.g., physics - tables, computer science - graphs);
+- researchers judge the quality of papers based on the graphics;
+- the goal as a reviewer is to improve the scientific process and provide suggestions;
+- practices evolve (e.g., photoshop was permitted for enhancing visualizations - biological tissue - and now is not allowed);
+
+
+### Guidelines
+
+- minimal effort for the reader
+- maximize information
+- minimize ink
+- make several representations and choose the adequate one
+- principles (Occam's razor, Dijkstra completion)
+
+
+### Common mistakes
+
+- multiple scaling, too much information
+- cryptic information
+- non-relevant graphical objects
+- taking into consideration methods of cheating (e.g., scale)
+
+
+### Exploratory data analysis
+
+- all analyses we perform rely on assumptions
+- do those assumptions hold?
+- check hypotheses
+- visualizations help determine independence
+- lag plot: plotting x_t vs x_(t+1); if the measurements are independent, the lag plot should show no correlation
+- Q-Q plot: comparing the empirical distribution with a theoretical one
+- difference between stationary process and random process (could have a stationary process that is not random and the lag plot could show that)
+- EDA: sequence plot, lag plot, histogram, quantile-quantile plot
+- if the distribution is skewed (?), the lag plot might not look like a cloud although the measurements are independent
+
+### Homework 
+
+- exercise 5 from module 2 (challenger)
+- fix figures by using good graphics guidelines
