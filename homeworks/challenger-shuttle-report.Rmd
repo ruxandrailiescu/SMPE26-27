@@ -1,0 +1,34 @@
+---
+title: "Challenger shuttle report"
+author: "Ruxandra Iliescu"
+date: "2026-10-05"
+output: github_document
+---
+
+# Summary
+One of the mistakes that I spotted in the analysis performed on the Challenger is that the observations corresponding to Malfunction=0 were removed. By looking at the logistic model fitted using the entire dataset, we can see that there could be an inverse proportional relationship between temperature and the probability of malfunction (i.e., as temperature decreases, the probability of malfunction increases).
+
+# Small analysis
+
+```{r}
+data = read.csv("module2_exo5_shuttle.csv",header=T)
+hist(data$Temperature)
+hist(data$Pressure)
+hist(data$Malfunction)
+```
+```{r}
+qqnorm(data$Temperature)
+qqline(data$Temperature)
+```
+```{r}
+logistic_reg = glm(data=data, Malfunction/Count ~ Temperature, weights=Count, 
+                   family=binomial(link='logit'))
+summary(logistic_reg)
+```
+```{r}
+# shuttle=shuttle[shuttle$r!=0,] 
+tempv = seq(from=30, to=90, by = .5)
+rmv <- predict(logistic_reg,list(Temperature=tempv),type="response")
+plot(tempv,rmv,type="l",ylim=c(0,1))
+points(data=data, Malfunction/Count ~ Temperature)
+```
