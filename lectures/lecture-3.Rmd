@@ -1,0 +1,19 @@
+---
+title: "lecture-3"
+author: "Ruxandra Iliescu"
+date: "2026-10-08"
+output: github_document
+---
+
+## Some commands
+
+```{r}
+library(dplyr)
+unique(mtcars$vs)
+mtcars %>% group_by(vs, am) %>% summarise(mpg_mean = mean(mpg), mpg_sd = sd(mpg), 
+                                      mpg_n = n())
+```
+
+## ggplot
+
+- take into consideration the type of the variable you display (discrete / continuous color palette)
