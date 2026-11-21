@@ -1,0 +1,16 @@
+---
+title: "mooc-module3-notes"
+author: "Ruxandra Iliescu"
+date: "2026-11-21"
+output: github_document
+---
+
+# Replicable data analysis
+
+## Case study: incidence of influenza-like illness
+- in order for our analysis to be reproducible (both for us in the future and other people), every modification must be traced; every step of the analysis has to be justified and presented.
+- for example, removing a non-conforming line from the dataset by simply deleting it from the file would not be in accordance with reproducibility.
+- data must never be modified "by hand".
+- everything must be done through some code. 
+- in the ISO 8601 standard, dates can be written either as year-month-day or year-week-day_of_week; for example, the date August 8, 2018 can be written as 2018-08-08 or 2018-W32-3; the first week of the year is the one that has more than half of its days in the new year or, equivalently, the one that contains the first Thursday of the year.
+- library `parsedate` in R for handling ISO date formats.
